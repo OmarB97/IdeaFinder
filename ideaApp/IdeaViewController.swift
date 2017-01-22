@@ -19,11 +19,12 @@ class IdeaViewController: UITableViewController {
     }
     @IBAction func ideaUpVote(_ sender: Any) {
     }
-    @IBAction func addNewIdea(_ sender: Any) {
-    }
     @IBAction func returnToCategories(_ sender: Any) {
+        performSegue(withIdentifier: "backToChooseSegue", sender: self)
     }
-    
+    @IBAction func createNewIdea(_ sender: Any) {
+        performSegue(withIdentifier: "newIdeaSegue", sender: self)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +33,14 @@ class IdeaViewController: UITableViewController {
         if let data = try? Data(contentsOf: url!) {
             let json = JSON(data: data)
             mainJSON = json
+            for dictionary in mainJSON.array! {
+                let likes = dictionary["likes"]
+                let id = dictionary["id"]
+                let category = dictionary["category"]
+                let text = dictionary["text"]
+                let obj = ["likes": likes, "id": id, "category": category, "text": text]
+                hotIdeas?.append(obj)
+            }
             //print(mainJSON)
         }
         
@@ -75,18 +84,20 @@ class IdeaViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print(indexPath.section)
+        print(mainJSON)
         let cell = tableView.dequeueReusableCell(withIdentifier: "hot0", for: indexPath)
+        let idea = mainJSON?.arrayValue[indexPath.item]
+        let title = cell.contentView.viewWithTag(1) as! UILabel
+        title.text = idea?.dictionaryObject?["text"] as? String
         
-        for dictionary in mainJSON.dictionary! {
-            print(dictionary)
-//            let likes = dictionary
-//            let id = dictionary["id"]
-//            let category = dictionary["category"]
-//            let text = dictionary["text"]
-        }
+        let likes = cell.contentView.viewWithTag(4) as! UILabel
+        likes.text = idea?.dictionaryObject?["likes"] as? String
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "detailSegue", sender: self)
     }
 
     override func didReceiveMemoryWarning() {

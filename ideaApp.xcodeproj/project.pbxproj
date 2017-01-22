@@ -17,6 +17,7 @@
 		F0E41DA71E34608C004A2652 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E41DA61E34608C004A2652 /* DetailViewController.swift */; };
 		F0E41DAB1E347139004A2652 /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E41DAA1E347139004A2652 /* NewViewController.swift */; };
 		F0E41DAD1E34D74A004A2652 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E41DAC1E34D74A004A2652 /* SwiftyJSON.swift */; };
+		F0E41DAF1E351CB3004A2652 /* Idea-Bulb-PNG-Clipart.png in Resources */ = {isa = PBXBuildFile; fileRef = F0E41DAE1E351CB3004A2652 /* Idea-Bulb-PNG-Clipart.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		F0E41DA61E34608C004A2652 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		F0E41DAA1E347139004A2652 /* NewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
 		F0E41DAC1E34D74A004A2652 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		F0E41DAE1E351CB3004A2652 /* Idea-Bulb-PNG-Clipart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Idea-Bulb-PNG-Clipart.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,14 +66,15 @@
 		F04F37B01E33536500ECAB15 /* ideaApp */ = {
 			isa = PBXGroup;
 			children = (
+				F0E41DAE1E351CB3004A2652 /* Idea-Bulb-PNG-Clipart.png */,
 				F04F37B11E33536500ECAB15 /* AppDelegate.swift */,
 				F0E41D961E33B704004A2652 /* CategoryCell.swift */,
 				F04F37B31E33536500ECAB15 /* ChooseController.swift */,
 				F0E41D981E33F49D004A2652 /* IdeaViewController.swift */,
+				F04F37B51E33536500ECAB15 /* Main.storyboard */,
 				F0E41DAC1E34D74A004A2652 /* SwiftyJSON.swift */,
 				F0E41DAA1E347139004A2652 /* NewViewController.swift */,
 				F0E41DA61E34608C004A2652 /* DetailViewController.swift */,
-				F04F37B51E33536500ECAB15 /* Main.storyboard */,
 				F04F37B81E33536500ECAB15 /* Assets.xcassets */,
 				F04F37BA1E33536500ECAB15 /* LaunchScreen.storyboard */,
 				F04F37BD1E33536500ECAB15 /* Info.plist */,
@@ -142,6 +145,7 @@
 				F04F37BC1E33536500ECAB15 /* LaunchScreen.storyboard in Resources */,
 				F04F37B91E33536500ECAB15 /* Assets.xcassets in Resources */,
 				F04F37B71E33536500ECAB15 /* Main.storyboard in Resources */,
+				F0E41DAF1E351CB3004A2652 /* Idea-Bulb-PNG-Clipart.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
